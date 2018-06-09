@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Component} from 'react';
+import * as PropTypes from 'prop-types';
 
 export interface ComponentProps {
   timeout: number;
@@ -14,6 +15,12 @@ export interface ComponentState {
 export class Timeout extends Component<ComponentProps, ComponentState> {
   state = {
     timedout: false
+  };
+
+  static propTypes = {
+    timeout: PropTypes.number.isRequired,
+    then: PropTypes.func,
+    children: PropTypes.func
   };
 
   timeout: number;
