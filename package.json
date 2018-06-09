@@ -1,6 +1,6 @@
 {
   "name": "react-power-timers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Renderless timers",
   "main": "dist/index.js",
   "scripts": {
@@ -38,7 +38,10 @@
   "files": [
     "dist"
   ],
-  "keywords": ["timer","renderprop"],
+  "keywords": [
+    "timer",
+    "renderprop"
+  ],
   "dependencies": {
     "prop-types": "^15.6.1"
   }
