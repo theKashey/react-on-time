@@ -1,37 +1,36 @@
 import * as React from 'react';
-import {Component} from 'react';
 import * as PropTypes from 'prop-types';
 
-export interface ComponentProps {
+export interface IComponentProps {
   delay: number;
   pause?: boolean;
   onTick: (tick: number) => any;
   children?: (tick: number) => React.ReactNode;
 }
 
-export interface ComponentState {
+export interface IComponentState {
   tick: number
 }
 
-export class Interval extends Component<ComponentProps, ComponentState> {
-  state = {
-    tick: 0
-  };
-
+export class Interval extends React.Component<IComponentProps, IComponentState> {
   static propTypes = {
-    delay:PropTypes.number.isRequired,
+    delay: PropTypes.number.isRequired,
     pause: PropTypes.bool,
     onTick: PropTypes.func,
     children: PropTypes.func
   };
 
-  timeout: number;
+  state = {
+    tick: 0
+  };
+
+  private timeout: number;
 
   componentDidMount() {
     this.start()
   }
 
-  componentDidUpdate(prevProps:ComponentProps) {
+  componentDidUpdate(prevProps: IComponentProps) {
     if (prevProps.delay !== this.props.delay || prevProps.pause !== this.props.pause) {
       this.stop();
       this.start();
@@ -53,7 +52,10 @@ export class Interval extends Component<ComponentProps, ComponentState> {
   }
 
   stop() {
-    this.timeout && window.clearInterval(this.timeout);
+    if (this.timeout) {
+      window.clearInterval(this.timeout);
+      this.timeout = 0;
+    }
   }
 
   render() {

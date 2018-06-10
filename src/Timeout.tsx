@@ -1,34 +1,36 @@
 import * as React from 'react';
-import {Component} from 'react';
 import * as PropTypes from 'prop-types';
 
-export interface ComponentProps {
+export interface IComponentProps {
   timeout: number;
   then?: () => any;
   children?: (timedout: boolean) => React.ReactNode;
 }
 
-export interface ComponentState {
+export interface IComponentState {
   timedout: boolean
 }
 
-export class Timeout extends Component<ComponentProps, ComponentState> {
-  state = {
-    timedout: false
-  };
-
+export class Timeout extends React.Component<IComponentProps, IComponentState> {
   static propTypes = {
     timeout: PropTypes.number.isRequired,
     then: PropTypes.func,
     children: PropTypes.func
   };
 
-  timeout: number;
+  state = {
+    timedout: false
+  };
+
+  private timeout: number;
 
   componentDidMount() {
     this.timeout = window.setTimeout(() => {
       this.setState({timedout: true});
-      this.props.then && this.props.then();
+
+      if(this.props.then){
+        this.props.then();
+      }
     }, this.props.timeout || 1000);
   }
 

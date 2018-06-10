@@ -27,6 +27,18 @@ import {Interval} from 'react-power-timers';
 </Interval> 
 ```
 
+3. `Stopwatch` - Continuous progress tracker, counting from 0 to 1.
+Based of request animation frame, could be used for animations.
+```js
+import {Stopwatch} from 'react-power-timers';
+
+<Stopwatch timeout={1000} onTick={progress => doSomething(progress)}/>
+
+<Stopwatch timout={1000}>
+ { progress => <span>#{Math.round(100*progress)}</span> }
+</Stopwatch> 
+```
+
 # Power usage
 
 ```js
