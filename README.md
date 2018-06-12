@@ -2,14 +2,15 @@
 ======
 Power timers to play schedule like a fiddle.
 
-[![Build Status](https://travis-ci.org/thekashey/react-on-time.svg?branch=master)](https://travis-ci.org/thekashey/react-on-time)
+[![Build Status](https://travis-ci.org/theKashey/react-on-time.svg?branch=master)](https://travis-ci.org/theKashey/react-on-time)
 [![NPM version](https://img.shields.io/npm/v/react-on-time.svg)](https://www.npmjs.com/package/react-on-time)
  
 
-Renderless timers and intervals. For delayed rendering, and complex animation orchestration.
+Renderless timers and intervals for delayed rendering, complex animation and orchestration.
 
 This works like a music on sheets. Mount -> wait -> fire -> unmount.
-Super simple and predictable, but gives you ability to construct any animations "flows" you might want.
+
+Super __simple and predictable__, but gives you ability to construct any animations "flow" you might need.
 
 
 
