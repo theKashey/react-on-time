@@ -44,10 +44,12 @@ export class Interval extends React.Component<IComponentProps, IComponentState> 
   start() {
     if (!this.props.pause) {
       this.timeout = window.setInterval(() => {
-        this.setState(({tick}) => ({tick: tick + 1}), () =>
+        this.setState(({tick}) => ({tick: tick + 1}), () => {
           this.props.onTick && this.props.onTick(this.state.tick)
-        )
+        })
       }, this.props.delay || 1000);
+
+      this.props.onTick && this.props.onTick(this.state.tick)
     }
   }
 

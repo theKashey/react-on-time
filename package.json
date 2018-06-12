@@ -1,7 +1,7 @@
 {
-  "name": "react-power-timers",
+  "name": "react-on-time",
   "version": "0.1.0",
-  "description": "Renderless timers",
+  "description": "Renderless timer composition",
   "main": "dist/index.js",
   "scripts": {
     "test": "ts-react-toolbox test",
@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theKashey/react-power-timers.git"
+    "url": "git+https://github.com/theKashey/react-on-time.git"
   },
   "bugs": {
-    "url": "https://github.com/theKashey/react-power-timers/issues"
+    "url": "https://github.com/theKashey/react-on-time/issues"
   },
   "homepage": "https://github.com/theKashey/react-power-timers#readme",
   "author": "Anton Korzunov (thekashey@gmail.com)",

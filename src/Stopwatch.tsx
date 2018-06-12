@@ -35,7 +35,7 @@ export class Stopwatch extends React.Component<IComponentProps, IComponentState>
   }
 
   tick() {
-    if (Date.now() - this.timeMount < this.props.timeout) {
+    if ((Date.now() - this.timeMount) < this.props.timeout) {
       this.raf = requestAnimationFrame(this.onTick);
     }
   }
