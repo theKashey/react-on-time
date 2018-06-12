@@ -20,7 +20,7 @@ Super __simple and predictable__, but gives you ability to construct any animati
  - took `timeout` as timer duration, 
  - `then` as optional callback and optional children as a render prop.
 ```js
-import {Timeout} from 'react-power-timers';
+import {Timeout} from 'react-on-time';
 
 <Timeout timeout={1000} then={doSomething}/>
 
@@ -33,7 +33,7 @@ import {Timeout} from 'react-power-timers';
  - tooks delay is interval duration
  - `onTick` or renderprop as a callback
 ```js
-import {Interval} from 'react-power-timers';
+import {Interval} from 'react-on-time';
 
 <Interval delay={1000} onTick={tick => doSomething(tick)}/>
 
@@ -46,7 +46,7 @@ import {Interval} from 'react-power-timers';
 Based of request animation frame, could be used for animations.
  - tooks `timeout` as duration, and start calling `onTick` or children every frame.
 ```js
-import {Stopwatch} from 'react-power-timers';
+import {Stopwatch} from 'react-on-time';
 
 <Stopwatch timeout={1000} onTick={progress => doSomething(progress)}/>
 
@@ -59,7 +59,7 @@ import {Stopwatch} from 'react-power-timers';
  - had `onStart` and `onEnd` handlers
  - accepts "normal" childrens
 ```js
-import {Era} from 'react-power-timers';
+import {Era} from 'react-on-time';
 
 <Era onStart={doSomething} onEnd={doSomething}>
  <Timer />
@@ -71,7 +71,7 @@ import {Era} from 'react-power-timers';
 
 ```js
 import {Value} from 'react-powerplug';
-import {Timeout, Era} from 'react-power-timers';
+import {Timeout, Era} from 'react-on-time';
 
 <Value initial={0}>
  {({value, set}) => (
