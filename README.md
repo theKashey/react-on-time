@@ -1,6 +1,10 @@
 ⏰ React-on-time
 ======
-Power timers to play schedule like a fiddle. 
+Power timers to play schedule like a fiddle.
+
+[![Build Status](https://travis-ci.org/thekashey/react-on-time.svg?branch=master)](https://travis-ci.org/thekashey/react-on-time)
+[![NPM version](https://img.shields.io/npm/v/react-on-time.svg)](https://www.npmjs.com/package/react-on-time)
+ 
 
 Renderless timers and intervals. For delayed rendering, and complex animation orchestration.
 
