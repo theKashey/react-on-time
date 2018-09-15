@@ -1,5 +1,5 @@
 .babelrc
 assets
-___tests___
 example
 custom-typings
+__tests__

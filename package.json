@@ -2,7 +2,6 @@
   "name": "react-on-time",
   "version": "1.0.0",
   "description": "Renderless timer composition",
-  "main": "dist/index.js",
   "scripts": {
     "test": "ts-react-toolbox test",
     "bootstrap": "ts-react-toolbox init",
@@ -26,7 +25,7 @@
   "author": "Anton Korzunov (thekashey@gmail.com)",
   "devDependencies": {
     "@types/prop-types": "^15.5.3",
-    "ts-react-toolbox": "^0.1.10"
+    "ts-react-toolbox": "^0.1.21"
   },
   "engines": {
     "node": ">=8.5.0"
@@ -34,7 +33,6 @@
   "peerDependencies": {
     "react": "^16.3.0"
   },
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -44,5 +42,9 @@
   ],
   "dependencies": {
     "prop-types": "^15.6.1"
-  }
+  },
+  "types": "dist/es5/index.d.ts",
+  "main": "dist/es5/index.js",
+  "jsnext:main": "dist/es2015/index.js",
+  "module": "dist/es2015/index.js"
 }
